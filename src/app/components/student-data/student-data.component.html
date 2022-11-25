@@ -1,0 +1,35 @@
+<p>Enter the student id whose data you want to fetch</p>
+<form (ngSubmit)="getStudentData()">
+    <mat-form-field class="example-full-width">
+        <mat-label>Student Id</mat-label>
+        <input name="studentId" [(ngModel)]="studentId" matInput>
+    </mat-form-field>
+   
+    <button type="submit" mat-button color="primary">Get Data</button>
+</form>
+
+<div class="container">
+    <table class="table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>studentId</th>
+        <th>studentMarks</th>
+        <th>studentName</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngIf="studentfetched">
+        <td><span>{{studentfetched.studentId}}</span></td>
+        <td><span>{{studentfetched.studentMarks}}</span></td>
+        <td><span>{{studentfetched.studentName}}</span></td>
+        
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  
+
+  

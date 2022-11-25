@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="innerContainer">
+    
+    <form (ngSubmit)="doSubmitForm()">
+      <h1>Please fill details of Intern</h1>
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Student Id</mat-label>
+        <input name="studentId" [(ngModel)]="data.studentId" matInput>
+      </mat-form-field>
+      
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Student Name</mat-label>
+        <input name="studentName" [(ngModel)]="data.studentName" matInput>
+      </mat-form-field>
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Student Marks</mat-label>
+        <input name="studentMarks" [(ngModel)]="data.studentMarks" matInput>
+      </mat-form-field>
+      <div class="submitbutton">
+        <button type="submit"  mat-raised-button color="primary">Submit</button>
+        <button type="reset" mat-raised-button color="primary" >Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
